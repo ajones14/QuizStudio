@@ -8,7 +8,7 @@ public abstract class Question {
 
     public Question(String prompt) {
         this.prompt = prompt;
-        this.point = 1;
+        this.point = 0;
     }
 
     public void displayPrompt() {
@@ -21,7 +21,7 @@ public abstract class Question {
         Scanner input = new Scanner(System.in);
         this.userAnswer = input.nextLine();
         this.userAnswer = this.userAnswer.toLowerCase();
-        input.close();
+//        input.close();
     }
 
     public String getPrompt() {

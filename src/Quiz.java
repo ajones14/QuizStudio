@@ -21,13 +21,16 @@ public class Quiz {
             question.displayChoices();
             question.collectAnswer();
             question.evaluateAnswer();
+            System.out.println();
         }
     }
 
     public void gradeQuiz() {
         double points = Question.getPoint();
         double percentGrade = points / this.questions.size();
-        System.out.println("Your Grade: " + points);
+        percentGrade = Math.round(percentGrade * 100);
+        int value = (int)percentGrade;
+        System.out.println("Your Grade: " + value + "%");
     }
 
 }
